@@ -1,6 +1,7 @@
 export default function SearchBar({searchText, setSearchText}) {
-    return <input onChange={(evt) => {
+    const handleChange = (evt) => {
         setSearchText(evt.target.value)
-    }}type="text" className="search" placeholder="Search by employee name"/>;
+    }
+    return <input onChange={handleChange} value={searchText} type="text" className="search" placeholder="Search by employee name"/>;
 }
   
